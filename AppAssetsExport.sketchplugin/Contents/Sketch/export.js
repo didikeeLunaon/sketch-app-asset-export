@@ -91,7 +91,7 @@ function exportScaleLayer(layer,dir,width,suffix){
      
 
      if(typeof suffix == 'undefined'){
-      var name = layer.name()+".png";
+      var name = "ic_icon"+".png";
 
        var path = dir+"/" + name.toLowerCase();
 

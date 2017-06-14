@@ -35,8 +35,8 @@ var doc,
     iOSSizeArray = [ 120,180,76,152,40,80,120,29,58,87,167,20,40,60],
     iOSBaseArray = [ 60,60,76,76,40,40,40,29,29,29,83.5,20,20,20],
 
-    androidDirArray = ["ldpi","mdpi","hdpi","xhdpi","xxhdpi","xxxhdpi"],
-    androidSizeArray = [ 36,48,72,96,144,192],
+    androidDirArray = ["mdpi","hdpi","xhdpi","xxhdpi","xxxhdpi","GooglePlay","Default"],
+    androidSizeArray = [48,72,96,144,192,512,1024],
 
      storeSuffixArray = [ "iTunesArtwork","iTunesArtwork@2x","GooglePlay","mi-90","mi-136","mi-168","mi-192","mi-224","qq-16","qq-512"],
       storeSizeArray = [ 512,1024,512,90,136,168,192,224,16,512];
@@ -355,7 +355,7 @@ function exportIOSIcon(layer){
     return layer;
    }
 
-function exportMiniAppsIcon(layer,path){
+function exportMiniApps(layer,path){
 
   log("exportMiniAppsIcon2 "+path ); //MSOvalShape
    //exportScaleLayer(layer,path,200,"miniapps");
@@ -406,7 +406,7 @@ function exportAndroidIcon(layer){
             var size = androidSizeArray[i];
 
 
-             var path =  appIconSetPath+"/drawable-"+suffix;
+             var path =  appIconSetPath+"/mipmap-"+suffix;
              if (!createFolderAtPath(path)) {
                    log("create "+path+" failure!");
                    continue;
